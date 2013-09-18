@@ -1,6 +1,5 @@
 use <MCAD/regular_shapes.scad>
 
-
 module arm(transVec) {
   color ("Yellow")
   translate(transVec)
@@ -21,7 +20,7 @@ module platform() {
     union() {
       translate([0, 3, 0])
         triangle(5);
-      circle(5);
+      circle(5, $fn = 60);
     }
 }
 
