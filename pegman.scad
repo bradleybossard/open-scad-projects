@@ -1,5 +1,11 @@
 use <MCAD/regular_shapes.scad>
 
+module head() {
+  color ("Yellow")
+  translate([0, 0, 13])
+  sphere(2, $fn = 60);
+}
+
 module arm(transVec) {
   color ("Yellow")
   translate(transVec)
@@ -24,5 +30,16 @@ module platform() {
     }
 }
 
-platform();
-body();
+module pegman() {
+  head();
+  platform();
+  body();
+}
+
+pegman();
+
+
+//translate([10, 0, 0])
+//pegman();
+
+
